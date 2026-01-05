@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Jan  5 15:47:50 2026
+# Process ID         : 22424
+# Current directory  : C:/Users/arbus/Desktop/schweigi/schweigi4/schweigi4
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent5032 C:\Users\arbus\Desktop\schweigi\schweigi4\schweigi4\schweigi4.xpr
+# Log file           : C:/Users/arbus/Desktop/schweigi/schweigi4/schweigi4/vivado.log
+# Journal file       : C:/Users/arbus/Desktop/schweigi/schweigi4/schweigi4\vivado.jou
+# Running On         : DESKTOP-L8GB348
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-11600K @ 3.90GHz
+# CPU Frequency      : 3912 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 17016 MB
+# Swap memory        : 11274 MB
+# Total Virtual      : 28290 MB
+# Available Virtual  : 16407 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/arbus/Desktop/schweigi/schweigi4/schweigi4/schweigi4.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source top.tcl
+add_force {/top/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/top/cpu_clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/top/argA} -radix hex {7 0ns}
+add_force {/top/argB} -radix hex {7 0ns}
+restart
+run 15 us
+close_sim
+launch_simulation
+source top.tcl
+restart
+add_force {/top/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/top/cpu_clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 15 us
+restart
+current_wave_config {Untitled 2}
+remove_forces { {/top/clk} }
+run 15 us
+restart
+add_force {/top/argA} -radix hex {7 0ns}
+add_force {/top/argB} -radix hex {7 0ns}
+run 15 us
+restart
+add_force {/top/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 15 us
+close_sim
+launch_simulation
+launch_simulation
+source top.tcl
+restart
+add_force {/top/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/top/cpu_clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 15 us
+restart
+add_force {/top/argA} -radix hex {7 0ns}
+add_force {/top/argB} -radix hex {7 0ns}
+run 15 us
+close_sim
+launch_simulation
+source top.tcl
+restart
+add_force {/top/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/top/cpu_clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 15 us
+close_sim
+launch_simulation
+source top.tcl
+restart
+add_force {/top/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/top/cpu_clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 15 us
+restart
+run 15 us
+close_sim
